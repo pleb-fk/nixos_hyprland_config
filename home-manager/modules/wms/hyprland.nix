@@ -113,7 +113,7 @@
       exec-once = [
         "swww-daemon "
         "swww img ~/Downloads/bg1.jpg"
-        #"waybar"
+        "waybar"
         #"wl-paste --type text --watch cliphist store"
         #"wl-paste --type image --watch cliphist store"
       ];
@@ -177,8 +177,8 @@
         "$mainMod, mouse_up, workspace, e-1"
 
         # Keyboard backlight
-        "$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
-        "$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
+        #"$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
+        #"$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
 
         # Volume and Media Control
         ", XF86AudioRaiseVolume, exec, pamixer -i 5 "

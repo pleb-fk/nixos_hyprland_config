@@ -9,6 +9,7 @@
     #./nm.nix
     #./virtmanager.nix
     ./hyprland.nix
+    #./waybar.nix
     #./trim.nix
     #./bluetooth.nix
     #./nixvim/nixvim.nix

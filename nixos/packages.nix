@@ -13,7 +13,12 @@
     gh
     chromium
     swww
-    #wofi
+    wofi
+    tmux
+    neovim
+    obsidian
+
+
 
 
 

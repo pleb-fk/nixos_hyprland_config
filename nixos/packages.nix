@@ -12,6 +12,8 @@
     openssl
     gh
     chromium
+    swww
+    #wofi
 
 
 

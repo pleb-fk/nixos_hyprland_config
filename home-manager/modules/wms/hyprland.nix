@@ -111,8 +111,8 @@
       ];
 
       exec-once = [
-        #"swww init"
-        #"swww img ~/Downloads/nixos-chan.png"
+        "swww-daemon "
+        "swww img ~/Downloads/bg1.jpg"
         #"waybar"
         #"wl-paste --type text --watch cliphist store"
         #"wl-paste --type image --watch cliphist store"

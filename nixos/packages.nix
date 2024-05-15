@@ -10,6 +10,10 @@
     htop
     unzip
     openssl
+    gh
+    chromium
+
+
 
     # Wayland stuff
     xwayland

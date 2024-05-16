@@ -9,7 +9,7 @@
 
         modules-left = ["hyprland/workspaces" "hyprland/language" "keyboard-state" "hyprland/submap"];
         modules-center = ["clock" "custom/weather"];
-        modules-right = ["pulseaudio" "custom/mem" "cpu" "backlight" "battery" "tray"];
+        modules-right = ["pulseaudio"  "tray" "bluetooth" "network"];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
@@ -46,6 +46,23 @@
         return-type = "json";
     };
 
+  "bluetooth"= {
+      "format"= "<span color='#b4befe'></span> {status}";
+      "format-disabled"= "";
+      "format-connected"= "<span color='#b4befe'></span> {num_connections}";
+      "tooltip-format"= "{device_enumerate}";
+      "tooltip-format-enumerate-connected"= "{device_alias}   {device_address}";
+    };
+    "network"= {
+      "interface"= "wlp3s0";
+      "format"= "{ifname}";
+      "format-wifi"= "<span color='#b4befe'> </span>{essid}";
+      "format-ethernet"= "{ipaddr}/{cidr} ";
+      "format-disconnected"= "<span color='#b4befe'>󰖪 </span>No Network";
+      "tooltip"= false;
+      on-click = "nmtui";
+    
+};
     "pulseaudio" = {
         # scroll-step = 1; # %, can be a float
         reverse-scrolling = 1;
@@ -97,6 +114,12 @@
         format-icons = [""];
         min-length = 7;
     };
+    
+"disk" ={
+	"interval" =30;
+	"format"= "{specific_free:0.2f}"; 
+	"unit"= "GB";
+};
 
     battery = {
         states = {
@@ -270,6 +293,15 @@ window#waybar.hidden {
     color: #ffffff;
     background: #383c4a;
 }
+#disk {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
 
 #temperature {
     margin-right: 8px;
@@ -286,6 +318,27 @@ window#waybar.hidden {
 }
 
 #backlight {
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#bluetooth {
+
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    background: #383c4a;
+}
+
+#network {
     margin-right: 8px;
     padding-left: 16px;
     padding-right: 16px;

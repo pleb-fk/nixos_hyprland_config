@@ -11,7 +11,7 @@
     ./hyprland.nix
     #./waybar.nix
     #./trim.nix
-    #./bluetooth.nix
+    ./bluetooth.nix
     #./nixvim/nixvim.nix
   ];
 }

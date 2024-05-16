@@ -12,13 +12,44 @@
     openssl
     gh
     chromium
+    microsoft-edge
+    firefox-esr
     swww
-    wofi
+    #wofi
     tmux
     neovim
     obsidian
+    #rofi
+    rofimoji
+   rofi-wayland
+    cloudflare-warp
+    #v2raya
+    sing-box
+
+    #gvfs
+
+    qv2ray
+    wgcf
+    mpv
+    unzip
+    bluez
+    bluez-tools
+    feh
+    xdg-utils
+
+    pamixer
+    pavucontrol
 
 
+    #coding stuff
+    gcc
+    python
+    go
+    (python3.withPackages (ps: with ps; [ requests ]))
+
+
+     # screenshot
+     flameshot
 
 
 
@@ -31,6 +62,7 @@
     xdg-desktop-portal-hyprland
     waybar
 xfce.thunar
+xfce.thunar-volman
 alacritty
 
   ];

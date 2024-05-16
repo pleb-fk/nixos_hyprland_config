@@ -12,6 +12,12 @@
       ./modules/bundle.nix
     ];
 
+# Warp stuff
+   systemd.packages = [ pkgs.cloudflare-warp ]; # for warp-cli
+  systemd.targets.multi-user.wants = [ "warp-svc.service" ]; # causes warp-svc to be started automatically
+
+# Auto mount
+services.gvfs.enable = true;
 
 nix.settings.experimental-features= [ "nix-command" "flakes"];
 
@@ -61,6 +67,8 @@ git
 home-manager
   #  wget
   ];
+
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

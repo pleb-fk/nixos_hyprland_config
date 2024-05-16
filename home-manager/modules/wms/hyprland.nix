@@ -23,7 +23,7 @@
       };
 
       input = {
-        kb_layout = "us,ru";
+        kb_layout = "us,ir";
         kb_variant = "lang";
         kb_options = "grp:caps_toggle";
 
@@ -108,25 +108,32 @@
       windowrule = [
         "float, ^(imv)$"
         "float, ^(mpv)$"
+	"forceinput, class:(rofimoji)$"
       ];
 
       exec-once = [
+	#"sudo warp-svc"
         "swww-daemon "
         "swww img ~/Downloads/bg1.jpg"
         "waybar"
-        #"wl-paste --type text --watch cliphist store"
-        #"wl-paste --type image --watch cliphist store"
+        "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
       ];
+      
+      #"exec sudo warp-svc";
+      #exec =  warp-svc;
+
 
       bind = [
-        "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
+        #"$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
         "$mainMod, Return, exec, alacritty"
         "$mainMod, Q, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, E, exec, dolphin"
         "$mainMod, F, togglefloating,"
-        "$mainMod, D, exec, wofi --show drun"
+        #"$mainMod, D, exec, wofi --show drun"
+        "$mainMod, D, exec, rofi -show drun -show-icons"
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, J, togglesplit, # dwindle"
 
